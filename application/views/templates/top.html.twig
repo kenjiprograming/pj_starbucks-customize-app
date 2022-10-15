@@ -1,1 +1,36 @@
-{{ a }}
+{% extends "./layout.html.twig" %}
+
+{% block content %}
+    <section id="about" class="wrap-blk">
+        <div class="contents-blk">
+            <h2>Frappuccino</h2>
+            <p>フラペチーノ</p>
+            <img src="{{ basePath }}common/img/frappeccino.png" alt="">
+            <p class="btn"><a href="{{ basePath }}search/frappuccino">カスタマイズする</a></p>
+        </div>
+        <div class="contents-blk">
+            <h2>Coffee</h2>
+            <p>コーヒー</p>
+            <img src="{{ basePath }}common/img/coffee.png" alt="">
+            <p class="btn"><a href="{{ basePath }}search/coffee">カスタマイズする</a></p>
+        </div>
+        <div class="contents-blk">
+            <h2>Espresso</h2>
+            <p>エスプレッソ</p>
+            <img src="{{ basePath }}common/img/espresso.png" alt="">
+            <p class="btn"><a href="{{ basePath }}search/espresso">カスタマイズする</a></p>
+        </div>
+        <div class="contents-blk">
+            <h2>Tea</h2>
+            <p>ティー</p>
+            <img src="{{ basePath }}common/img/tea.png" alt="">
+            <p class="btn"><a href="{{ basePath }}search/tea">カスタマイズする</a></p>
+        </div>
+        <div class="contents-blk">
+            <h2>Others</h2>
+            <p>その他</p>
+            <img src="{{ basePath }}common/img/others.png" alt="">
+            <p class="btn"><a href="{{ basePath }}search/other">カスタマイズする</a></p>
+        </div>
+    </section>
+{% endblock content %}

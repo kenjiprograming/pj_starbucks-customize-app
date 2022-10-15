@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customize Your Starbucks</title>
+    <link rel="stylesheet" href="{{ basePath }}common/css/style.css">
+</head>
+<body>
+
+{% block header %}
+    <header id="kv">
+        <div class="hello">
+            <h1>Customize Your Starbucks</h1>
+            <p>ここに日本語でこのサイトの説明文を書く</p>
+        </div>
+    </header>
+{% endblock header %}
+
+{{ block('content') }}
+
+{% block footer %}
+{% endblock footer %}
+
+</body>
+</html>
