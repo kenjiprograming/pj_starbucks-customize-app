@@ -1290,7 +1290,7 @@ class XML_RPC_Message extends CI_Xmlrpc
 			if ($name !== 'METHODRESPONSE' && $name !== 'METHODCALL')
 			{
 				$this->xh[$the_parser]['isf'] = 2;
-				$this->xh[$the_parser]['isf_reason'] = 'Top level XML-RPC element is missing';
+				$this->xh[$the_parser]['isf_reason'] = 'TopController level XML-RPC element is missing';
 				return;
 			}
 		}
