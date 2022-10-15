@@ -1,6 +1,9 @@
 <?php
 
-class Top extends CI_Controller
+/**
+ * @property $twig
+ */
+class TopController extends CI_Controller
 {
     public function __construct()
     {
