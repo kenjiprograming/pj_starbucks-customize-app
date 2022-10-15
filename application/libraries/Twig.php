@@ -17,6 +17,7 @@ class Twig
 
         // CodeIgniterのhelper関数をTwigに追加することもできる
         $this->twig->addGlobal('baseUrl', base_url());
+        $this->twig->addGlobal('siteUrl', site_url());
         $this->twig->addFunction(new Twig\TwigFunction('setValue', 'set_value'));
         $this->twig->addFunction(new Twig\TwigFunction('formError', 'form_error'));
     }
