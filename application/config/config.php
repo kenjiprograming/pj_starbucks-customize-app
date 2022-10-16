@@ -23,7 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = dirname($_SERVER['SCRIPT_NAME']);
+if(isset($_SERVER['HTTP_HOST'])){
+    $config['base_url'] = ((!empty($_SERVER['HTTPS']) and $_SERVER['HTTPS'] !== 'off')
+            ? 'https://' : 'http://'). $_SERVER['HTTP_HOST']
+        . (isset($_SERVER['ORIG_SCRIPT_NAME']) ? dirname($_SERVER['ORIG_SCRIPT_NAME']) : dirname($_SERVER['SCRIPT_NAME']))
+        . '/';
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -214,7 +221,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 1;
 
 /*
 |--------------------------------------------------------------------------
