@@ -10,7 +10,7 @@ class TopController extends CI_Controller
         parent::__construct();
     }
 
-    public function index()
+    public function index(): void
     {
         $assign['a'] = 'aa';
 
