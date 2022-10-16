@@ -1,19 +1,16 @@
-{% extends "./layout.html.twig" %}
+{% extends "./templates/layout.html.twig" %}
 
 {% block content %}
     <div class="container text-center">
         <h1>Choice your frappuccion</h1>
-        <form action="/starbucks-gacha/result" method="post">
+        <form action="{{ baseUrl }}result/" method="post">
             <div class="item-boxes">
-                {% for drinkEntity in drinkRepository.getDrinkEntities %}
-                    <div>
-                        <label>
-                            <input type="radio" name="item" value="{{ drinkEntity.getName }}">
-                            {{ drinkEntity.getName | raw }}
-                        </label>
-                        <img src="{{ drinkEntity.getImageUrl }}" alt="">
-                    </div>
-                {% endfor %}
+                <div>
+                    <label>
+                        <input type="radio" name="item" value="">
+                    </label>
+                    <img src="" alt="">
+                </div>
             </div>
 
             <div class="price-boxes">
