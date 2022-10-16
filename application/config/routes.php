@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['search/(:any)'] = 'SearchController/index/$1';
+$route['result'] = 'ResultController/index';
