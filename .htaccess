@@ -1,0 +1,9 @@
+SetEnvIf Host "^localhost"        CI_ENV=development
+#SetEnvIf Host "^192.168.1.50"     CI_ENV=development
+#SetEnvIf Host "^demo.artisj.com"  CI_ENV=staging
+#SetEnvIf Host "^(www.)?816t.jp"   CI_ENV=production
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
