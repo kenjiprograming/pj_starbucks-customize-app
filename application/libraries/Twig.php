@@ -1,5 +1,4 @@
 <?php
-// libraries/Twig.php
 
 class Twig
 {
@@ -23,10 +22,21 @@ class Twig
     }
 
     // CodeIgniterのoutputにTwigのrenderを渡す
-    public function render($template, $data=[])
+    public function render($template, $data=[]): void
     {
-        $this->ci->output->set_output(
-            $this->twig->render($template, $data)
-        );
+        try {
+            $this->ci->output->set_output(
+                $this->twig->render($template, $data)
+            );
+        } catch (\Twig\Error\LoaderError $e) {
+            echo 'LoaderErrorが起こりました。前に戻ってください。';
+            exit();
+        } catch (\Twig\Error\RuntimeError $e) {
+            echo 'RuntimeErrorが起こりました。前に戻ってください。';
+            exit();
+        } catch (\Twig\Error\SyntaxError $e) {
+            echo 'SyntaxErrorが起こりました。前に戻ってください。';
+            exit();
+        }
     }
 }
