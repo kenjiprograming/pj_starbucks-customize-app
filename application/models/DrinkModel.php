@@ -13,7 +13,6 @@ class DrinkModel extends CI_Model
         $this->setDrinkData();
     }
 
-
     // ---------------------Getter----------------------------------------------------------------------------------
 
 
@@ -64,7 +63,7 @@ class DrinkModel extends CI_Model
             return [
                 'id' => $apiRawDatum['id'],
                 'name' => $apiRawDatum['product_name'],
-                'kindEn' => $apiRawDatum['category2_list_path'],
+                'kind' => $apiRawDatum['category2_list_path'],
                 'kindJp' => $apiRawDatum['category2_name'],
                 'price' => $apiRawDatum['price'],
                 'size' => $apiRawDatum['size'],
@@ -72,7 +71,7 @@ class DrinkModel extends CI_Model
                 'chunkProducts' => array_map(static function ($chunkProduct) use ($apiRawDatum) {
                     return [
                         'name' => $chunkProduct['product_name'],
-                        'kindEn' => $chunkProduct['category2_list_path'],
+                        'kind' => $chunkProduct['category2_list_path'],
                         'kindJp' => $chunkProduct['category2_name'],
                         'price' => $chunkProduct['price'],
                         'size' => $chunkProduct['size'],
@@ -82,15 +81,37 @@ class DrinkModel extends CI_Model
             ];
         }, $apiRawData);
 
-        $this->generateDrinkDataJson($marshaledApiData);
+        $this->classifyInKinds($marshaledApiData);
     }
 
-    private function generateDrinkDataJson($marshaledApiData)
+    private function classifyInKinds($marshaledApiData)
+    {
+        $kinds = [
+            'frappuccino',
+            'drip',
+            'espresso',
+            'tea',
+            'others',
+            'roastery',
+        ];
+
+        $classifiedApiData = [];
+
+        foreach ($kinds as $kind) {
+            $classifiedApiData[$kind] = array_filter($marshaledApiData, static function ($marshaledApiDatum) use ($kind) {
+                return $marshaledApiDatum['kind'] === $kind;
+            });
+        }
+
+        $this->generateDrinkDataJson($classifiedApiData);
+    }
+
+    private function generateDrinkDataJson($classifiedApiData)
     {
         try
         {
-            $json = json_encode($marshaledApiData, JSON_THROW_ON_ERROR);
-            $bytes = file_put_contents(FCPATH . "data/drinkData.json", $json);
+            $json = json_encode($classifiedApiData, JSON_THROW_ON_ERROR);
+            $bytes = file_put_contents(self::DRINK_DATA_PATH, $json);
             log_message("debug", "generate $bytes bytes of Drink Data File");
         }
         catch (JsonException $e) {
