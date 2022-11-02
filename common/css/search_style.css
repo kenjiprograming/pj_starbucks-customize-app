@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+/*---------------------------------------default*/
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5;
+}
+
+/*-------------------------------------------------------------All*/
+body {
+  margin: 0;
+  padding: 0;
+  color: #797e81;
+  font-family: 'Courgette', cursive,'Zen Maru Gothic', sans-serif;
+  font-size: 1rem;
+  text-align: auto;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+h1 {
+  color: #535353;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.container-a {
+  width: 30%;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+p {
+  margin: 20px;
+}
+
+.container-2 {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.container-b {
+  width: 10%;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.container-3 {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.container-c {
+  justify-content: center;
+  width: 10%;
+  font-size: 1.2rem;
+}
+
+.selection-4 {
+  text-align: center;
+}
+
+.letscustomize {
+  font-family: 'Courgette', cursive;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #aa89bd;
+}
+
+.selection-4 .btn {
+  display: inline-block;
+  justify-content: center;
+  font-family: 'Courgette', cursive;
+  box-sizing: border-box;
+  width: 155px;
+  height: 42px;
+  border: 2px solid #aa89bd;
+  border-radius: 21px;
+  color: #aa89bd;
+  background-color: white;
+  font-size: 0.9rem;
+  line-height: 38px;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.selection-4 .btn:hover {
+  background-color: #aa89bd;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 414px) {
+  body {
+    line-height: 1.5;
+  }
+
+  h1 {
+    margin: 40px auto 10px;
+    width: auto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+
+  .container-a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container-2 {
+    margin: 0px;
+    justify-content: center;
+  }
+
+  .container-b {
+    width: 100%;
+    text-align: center;
+    margin: 15px 15px 20px;
+  }
+
+  .container-3 {
+    margin: 0px;
+    justify-content: center;
+  }
+
+  .container-c {
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    margin: 15px;
+  }
+}

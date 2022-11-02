@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: #797e81;
-  font-family: serif;
+  font-family: 'Courgette', cursive,'Zen Maru Gothic', sans-serif;
   font-size: 1rem;
   text-align: center;
   line-height: 1.7;
@@ -49,6 +49,7 @@ h6 {
 }
 
 .hello {
+  font-family: 'Courgette', cursive;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -57,6 +58,7 @@ h6 {
 }
 
 h1 {
+  font-family: 'Courgette', cursive;
   font-size: 2.8rem;
   color: white;
 }
@@ -83,9 +85,11 @@ h1 {
   width: 20%;
 }
 
-.contents-blk .img {
+.contents-blk  .img {
   width: 160px;
+
 }
+
 
 .btn {
   margin: 20px 0 0;
@@ -107,4 +111,46 @@ h1 {
 .btn a:hover {
   background-color: #aa89bd;
   color: white;
+}
+
+
+/*--------------------------スマホーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+@media screen and (max-width: 414px){
+
+  body {
+    margin: 0;
+    padding: 0;
+    color: #797e81;
+    font-family: 'Courgette', cursive,'Zen Maru Gothic', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+
+.hello {
+  width: 320px;
+}
+
+.hello h1 {
+  font-size: 1.5rem;
+}
+
+.wrap-blk {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contents-blk {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+
+
+
+
 }
