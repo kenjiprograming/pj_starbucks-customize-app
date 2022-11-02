@@ -4,5 +4,11 @@
 {% endblock header %}
 
 {% block content %}
-    {{ aaa }}
+    <h2>{{ name }}</h2>
+    <img src="{{ imageUrl }}" alt="">
+    {% for set in sets %}
+        {{ set[0] }}
+        {{ set[1] }}
+        {{ set[2] }}
+    {% endfor %}
 {% endblock content %}
