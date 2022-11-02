@@ -5,7 +5,6 @@ declare(strict_types=1);
  * @property Twig       $twig
  * @property CI_Input   $input
  * @property CI_Config  $config
- * @property DrinkModel $drinkModel
  */
 class ResultController extends CI_Controller
 {
@@ -14,9 +13,6 @@ class ResultController extends CI_Controller
     {
         parent::__construct();
         $this->load->config('data');
-        $this->load->model([
-            'drinkModel'
-        ]);
     }
 
     public function index(): void
