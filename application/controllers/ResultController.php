@@ -17,14 +17,21 @@ class ResultController extends CI_Controller
 
     public function index(): void
     {
-        $drink_customize_set = $this->config->item('drink_customize_set');
-        $name = $_POST['name'];
-        $price = $_POST['price'];
-        $imageUrl = $_POST['imageUrl'];
-        $selectedPrice = $_POST['selectedPrice'];
+        $post = $_POST;
+
+        $drink = $this->config->item('drinks')[$post['name']];
+
+        $ice_or_hot    = $post['ice_or_hot'];
+        $selectedPrice = $post['selectedPrice'];
+
+        $name       = $drink['name'];
+        $price      = $drink['price'];
+        $imageUrl   = $drink['imageUrl'];
+        $customizes = $drink['customizes'];
+
 
         $assign = [
-            'sets' => $drink_customize_set[$name],
+            'customizes' => $customizes[$ice_or_hot],
             'name' => $name,
             'price' => $price,
             'selectedPrice' => $selectedPrice,
