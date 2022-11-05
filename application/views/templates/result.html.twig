@@ -1,14 +1,56 @@
 {% extends "./templates/layout.html.twig" %}
 
+{% block links%}
+    <link rel="stylesheet" href="{{ baseUrl }}common/css/result_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+{% endblock links%}
+
 {% block header %}
+    <header>
+        <h1>Options for you!</h1>
+        <p class="lead">あなたにおすすめのカスタマイズ！</p>
+    </header>
 {% endblock header %}
 
 {% block content %}
-    <h2>{{ name }}</h2>
-    <img src="{{ imageUrl }}" alt="">
-    {% for set in sets %}
-        {{ set[0] }}
-        {{ set[1] }}
-        {{ set[2] }}
-    {% endfor %}
+    <section id="kv">
+        <div class="block">
+            <div class="contents-blk">
+                <h2>Set1</h2>
+                <h3>商品名</h3>
+
+                <p>★カスタマイズ1</p>
+                <p>★カスタマイズ2</p>
+                <p>★カスタマイズ3</p>
+                <p>★カスタマイズ4</p>
+            </div>
+
+            <div class="contents-blk">
+                <h2>Set2</h2>
+                <h3>商品名</h3>
+
+                <p>★カスタマイズ1</p>
+                <p>★カスタマイズ2</p>
+                <p>★カスタマイズ3</p>
+                <p>★カスタマイズ4</p>
+            </div>
+
+
+
+            <div class="contents-blk">
+                <h2>Set3</h2>
+                <h3>商品名</h3>
+
+                <p>★カスタマイズ1</p>
+                <p>★カスタマイズ2</p>
+                <p>★カスタマイズ3</p>
+                <p>★カスタマイズ4</p>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
