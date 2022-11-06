@@ -29,9 +29,21 @@ class ResultController extends CI_Controller
         $imageUrl   = $drink['imageUrl'];
         $customizes = $drink['customizes'];
 
+        $totalPrices = [];
+
+        foreach ($customizes[$ice_or_hot] as $catchPhrase => $customize)
+        {
+            $totalPrice = $price;
+            foreach ($customize as $custom => $addPrice)
+            {
+                 $totalPrice += $addPrice;
+            }
+            $totalPrices[$catchPhrase] = $totalPrice;
+        }
 
         $assign = [
             'customizes' => $customizes[$ice_or_hot],
+            'totalPrices' => $totalPrices,
             'name' => $name,
             'price' => $price,
             'selectedPrice' => $selectedPrice,
