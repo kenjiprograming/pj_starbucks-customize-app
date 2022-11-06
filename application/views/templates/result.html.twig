@@ -18,39 +18,20 @@
 {% endblock header %}
 
 {% block content %}
-    <section id="kv">
+    <section id="kv" style="background-image: url({{ imageUrl }});">
         <div class="block">
-            <div class="contents-blk">
-                <h2>Set1</h2>
-                <h3>商品名</h3>
+            {% for catchPhrase, customize in customizes %}
+                <div class="contents-blk">
+                    <h2>Set{{ loop.index }}</h2>
+                    <h3>{{ catchPhrase }}</h3>
 
-                <p>★カスタマイズ1</p>
-                <p>★カスタマイズ2</p>
-                <p>★カスタマイズ3</p>
-                <p>★カスタマイズ4</p>
-            </div>
+                    {% for custom, addPrice in customize %}
+                        <p>★{{ custom }}（+¥{{ addPrice }}）</p>
+                    {% endfor %}
 
-            <div class="contents-blk">
-                <h2>Set2</h2>
-                <h3>商品名</h3>
-
-                <p>★カスタマイズ1</p>
-                <p>★カスタマイズ2</p>
-                <p>★カスタマイズ3</p>
-                <p>★カスタマイズ4</p>
-            </div>
-
-
-
-            <div class="contents-blk">
-                <h2>Set3</h2>
-                <h3>商品名</h3>
-
-                <p>★カスタマイズ1</p>
-                <p>★カスタマイズ2</p>
-                <p>★カスタマイズ3</p>
-                <p>★カスタマイズ4</p>
-            </div>
+                    <h3>totalPrice: ￥{{ totalPrices[catchPhrase] }}</h3>
+                </div>
+            {% endfor %}
         </div>
     </section>
 {% endblock content %}

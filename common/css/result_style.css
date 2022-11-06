@@ -63,7 +63,7 @@ h1 {
 
 #kv {
     display: block;
-    background-image: url(../img/optionimg.jpg);
+    /*background-image: url(../img/optionimg.jpg);*/
     height: 1200px;
     background-size: cover;
     background-position: center;
