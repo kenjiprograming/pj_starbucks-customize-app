@@ -1,3 +1,4 @@
+style.css
 @charset "UTF-8";
 
 /*---------------------------------------default*/
@@ -39,13 +40,28 @@ h6 {
   font-weight: 600;
 }
 
+img {
+  width: 100%;
+}
+
 #kv {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../img/kv.png);
+  background-image: url(../img/newkv.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: white;
+
+}
+
+#kv::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
 }
 
 .hello {
@@ -55,6 +71,7 @@ h6 {
   left: 50%;
   width: 800px;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 h1 {
@@ -66,7 +83,7 @@ h1 {
 #about {
   background: #fff;
   width: 100%;
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 #about h2 {
@@ -85,8 +102,10 @@ h1 {
   width: 20%;
 }
 
-.contents-blk  .img {
-  width: 160px;
+#about .contents-blk  img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
 
 }
 
@@ -100,16 +119,16 @@ h1 {
   box-sizing: border-box;
   width: 155px;
   height: 42px;
-  border: 2px solid #aa89bd;
+  border: 2px solid #068e0c;
   border-radius: 21px;
-  color: #aa89bd;
+  color: #068e0c;
   font-size: 0.9rem;
   line-height: 38px;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .btn a:hover {
-  background-color: #aa89bd;
+  background-color: #068e0c;
   color: white;
 }
 
@@ -129,28 +148,38 @@ h1 {
     -webkit-text-size-adjust: 100%;
   }
 
-.hello {
-  width: 320px;
-}
 
-.hello h1 {
-  font-size: 1.5rem;
-}
+  #kv {
+    background-position: right;
+  }
+  .hello {
+    width: 320px;
+  }
 
-.wrap-blk {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  .hello h1 {
+    font-size: 1.8rem;
+  }
 
-.contents-blk {
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 60px;
-}
+  .wrap-blk {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
+  .contents-blk {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 
-
+  #about h2 {
+    font-size: 1.5rem;
+  }
+  #about .contents-blk img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
 
 
 }

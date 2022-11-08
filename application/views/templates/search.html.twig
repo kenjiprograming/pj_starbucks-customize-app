@@ -4,7 +4,7 @@
     Choice your drink
 {% endblock title %}
 
-{% block links%}
+{% block links %}
     <link rel="stylesheet" href="{{ baseUrl }}common/css/search_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
-{% endblock links%}
+{% endblock links %}
+
+{% block header %}
+{% endblock header %}
 
 {% block content %}
 
-    <div class="choice">
-        <h1>Choice your Frappuccino</h1>
-    </div>
+    <h1>Choice your Frappuccino</h1>
 
     <form action="{{ baseUrl }}result/" method="post">
         <div class="container">
@@ -34,7 +35,6 @@
             {% endfor %}
         </div>
 
-
         <div class="selection-2">
             <h1>Choice hot or ice</h1>
         </div>
@@ -42,41 +42,13 @@
         <div class="container-2">
             <div class="container-b">
                 <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot">
-                <label for="g">ホット</label>
+                <label for="g">Hot</label>
             </div>
+
             <div class="container-b">
                 <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice">
-                <label for="h">アイス</label>
+                <label for="h">Ice</label>
             </div>
-        </div>
-
-        <div class="selection-3">
-            <h1>Choice the price</h1>
-        </div>
-
-
-        <div class="container-3">
-
-            <div class="container-c">
-                <input class="btn" type="radio" name="selectedPrice" value="500">
-                <label for="i">¥500</label>
-            </div>
-
-            <div class="container-c">
-                <input class="btn" type="radio" name="selectedPrice" value="600">
-                <label for="j">¥600</label>
-            </div>
-
-            <div class="container-c">
-                <input class="btn" type="radio" name="selectedPrice" value="700">
-                <label for="k">¥700</label>
-            </div>
-
-            <div class="container-c">
-                <input class="btn" type="radio" name="selectedPrice" value="800">
-                <label for="l">¥800</label>
-            </div>
-
         </div>
 
         <div class="selection-4">

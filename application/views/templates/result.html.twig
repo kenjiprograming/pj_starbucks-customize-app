@@ -22,14 +22,18 @@
         <div class="block">
             {% for catchPhrase, customize in customizes %}
                 <div class="contents-blk">
-                    <h2>Set{{ loop.index }}</h2>
-                    <h3>{{ catchPhrase }}</h3>
+                    <h2>{{ catchPhrase }}</h2>
 
                     {% for custom, addPrice in customize %}
-                        <p>★{{ custom }}（+¥{{ addPrice }}）</p>
+                        <div class="items">
+                            {% if loop.index0 == 0 %}
+                                    {{ name }}
+                            {% endif %}
+                            <p>★{{ custom }}（+¥{{ addPrice }}）</p>
+                        </div>
                     {% endfor %}
 
-                    <h3>totalPrice: ￥{{ totalPrices[catchPhrase] }}</h3>
+                    <h3>Total Price¥{{ totalPrices[catchPhrase] }}</h3>
                 </div>
             {% endfor %}
         </div>
