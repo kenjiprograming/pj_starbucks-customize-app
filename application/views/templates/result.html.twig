@@ -24,16 +24,16 @@
                 <div class="contents-blk">
                     <h2>{{ catchPhrase }}</h2>
 
-                    {% for custom, addPrice in customize %}
-                        <div class="items">
+                    <div class="items">
+                        {% for custom, addPrice in customize %}
                             {% if loop.index0 == 0 %}
-                                    {{ name }}
+                                <h3>★{{ name }}★</h3>
                             {% endif %}
-                            <p>★{{ custom }}（+¥{{ addPrice }}）</p>
-                        </div>
-                    {% endfor %}
+                            <p>・{{ custom }}（+¥{{ addPrice }}）</p>
+                        {% endfor %}
+                    </div>
 
-                    <h3>Total Price¥{{ totalPrices[catchPhrase] }}</h3>
+                    <h4>-Total Price ¥{{ totalPrices[catchPhrase] }}-</h4>
                 </div>
             {% endfor %}
         </div>

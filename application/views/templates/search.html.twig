@@ -25,10 +25,10 @@
         <div class="container">
             {% for index,drink in drinks %}
                 <div class="container-a">
+                    <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}">
                     <label for="{{ index }}">{{ drink.name|raw }}
-                        <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}">
-                        <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
                     </label>
+                    <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
                 </div>
                 <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
                 <input type="hidden" name="price" value="{{ drink.price }}">
