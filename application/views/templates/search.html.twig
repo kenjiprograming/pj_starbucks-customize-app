@@ -45,31 +45,17 @@
             <h1>Choice hot or ice</h1>
         </div>
 
-        {% if kind == 'frappuccino' %}
-            <div class="container-2">
-                <div class="container-b">
-                    <input class="btn" id="g" disabled type="radio" name="ice_or_hot" value="hot">
-                    <label for="g">Hot</label>
-                </div>
-
-                <div class="container-b">
-                    <input class="btn" id="h" checked type="radio" name="ice_or_hot" value="ice">
-                    <label for="h">Ice</label>
-                </div>
+        <div class="container-2">
+            <div class="container-b">
+                <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot" {% if kind == 'frappuccino' %}disabled{% endif %}>
+                <label for="g">Hot</label>
             </div>
-        {% else %}
-            <div class="container-2">
-                <div class="container-b">
-                    <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot">
-                    <label for="g">Hot</label>
-                </div>
 
-                <div class="container-b">
-                    <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice">
-                    <label for="h">Ice</label>
-                </div>
+            <div class="container-b">
+                <input class="btn" id="h" checked type="radio" name="ice_or_hot" value="ice">
+                <label for="h">Ice</label>
             </div>
-        {% endif %}
+        </div>
 
         <div class="selection-4">
             <p class="letscustomize">Let's customize!!</p>
