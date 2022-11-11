@@ -25,9 +25,15 @@
         <div class="container">
             {% for index,drink in drinks %}
                 <div class="container-a">
-                    <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}">
-                    <label for="{{ index }}">{{ drink.name|raw }}
-                    </label>
+                    {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}
+                        <input class="btn" id="{{ index }}" disabled type="radio" name="name" value="{{ drink.name|raw }}">
+                        <label for="{{ index }}">{{ drink.name|raw }}(準備中)
+                        </label>
+                    {% else %}
+                        <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}">
+                        <label for="{{ index }}">{{ drink.name|raw }}
+                        </label>
+                    {% endif %}
                     <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
                 </div>
                 <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
@@ -39,17 +45,31 @@
             <h1>Choice hot or ice</h1>
         </div>
 
-        <div class="container-2">
-            <div class="container-b">
-                <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot">
-                <label for="g">Hot</label>
-            </div>
+        {% if kind == 'frappuccino' %}
+            <div class="container-2">
+                <div class="container-b">
+                    <input class="btn" id="g" disabled type="radio" name="ice_or_hot" value="hot">
+                    <label for="g">Hot</label>
+                </div>
 
-            <div class="container-b">
-                <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice">
-                <label for="h">Ice</label>
+                <div class="container-b">
+                    <input class="btn" id="h" checked type="radio" name="ice_or_hot" value="ice">
+                    <label for="h">Ice</label>
+                </div>
             </div>
-        </div>
+        {% else %}
+            <div class="container-2">
+                <div class="container-b">
+                    <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot">
+                    <label for="g">Hot</label>
+                </div>
+
+                <div class="container-b">
+                    <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice">
+                    <label for="h">Ice</label>
+                </div>
+            </div>
+        {% endif %}
 
         <div class="selection-4">
             <p class="letscustomize">Let's customize!!</p>
