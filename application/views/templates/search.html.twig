@@ -21,46 +21,91 @@
 
     <h1>Choice your Frappuccino</h1>
 
-    <form action="{{ baseUrl }}result/" method="post">
-        <div class="container">
-            {% for index,drink in drinks %}
-                <div class="container-a">
-                    {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}
-                        <input class="btn" id="{{ index }}" disabled type="radio" name="name" value="{{ drink.name|raw }}">
-                        <label for="{{ index }}">{{ drink.name|raw }}(準備中)
+    <div id="search-wrapper">
+        <form action="{{ baseUrl }}result/" method="post">
+            <div class="container">
+                {% for index,drink in drinks %}
+                    <div class="container-a">
+                        <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}"
+                               {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}disabled{% endif %}
+                               @change="clickName"
+                        >
+                        <label for="{{ index }}">
+                            {{ drink.name|raw }}
+                            {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(準備中){% endif %}
                         </label>
-                    {% else %}
-                        <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}">
-                        <label for="{{ index }}">{{ drink.name|raw }}
-                        </label>
-                    {% endif %}
-                    <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
+                        <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
+                    </div>
+                    <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
+                    <input type="hidden" name="price" value="{{ drink.price }}">
+                {% endfor %}
+            </div>
+
+            <div class="selection-2">
+                <h1>Choice hot or ice</h1>
+            </div>
+
+            <div class="container-2">
+                <div class="container-b">
+                    <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot" {% if kind == 'frappuccino' %}disabled{% endif %}
+                           @click="clickIceOrHot"
+                    >
+                    <label for="g">Hot</label>
                 </div>
-                <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
-                <input type="hidden" name="price" value="{{ drink.price }}">
-            {% endfor %}
-        </div>
 
-        <div class="selection-2">
-            <h1>Choice hot or ice</h1>
-        </div>
-
-        <div class="container-2">
-            <div class="container-b">
-                <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot" {% if kind == 'frappuccino' %}disabled{% endif %}>
-                <label for="g">Hot</label>
+                <div class="container-b">
+                    <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice" {% if kind == 'frappuccino' %}checked{% endif %}
+                           @click="clickIceOrHot"
+                    >
+                    <label for="h">Ice</label>
+                </div>
             </div>
 
-            <div class="container-b">
-                <input class="btn" id="h" checked type="radio" name="ice_or_hot" value="ice">
-                <label for="h">Ice</label>
+            <div class="selection-4">
+                <p class="letscustomize">Let's customize!!</p>
+                <input class="btn" type="submit" name="submit" value="カスタマイズする" id="submit"
+                       v-bind:disabled="cannot_submit"
+                >
             </div>
-        </div>
 
-        <div class="selection-4">
-            <p class="letscustomize">Let's customize!!</p>
-            <input class="btn" type="submit" name="submit" value="カスタマイズする">
-        </div>
-
-    </form>
+        </form>
+    </div>
 {% endblock content %}
+
+{% block vue %}
+    <script>
+        let searchWrapper = new Vue({
+            el: '#search-wrapper',
+            data: {
+                name: false,
+                ice_or_hot: false,
+                cannot_submit: true
+            },
+            mounted () {
+                let isFrappucino = document.getElementById("h").checked;
+                if (isFrappucino) {
+                    this.ice_or_hot = true;
+                }
+            },
+            methods: {
+                clickName() {
+                    this.name = true;
+
+                    if (this.ice_or_hot === true) {
+                        this.youCanSubmit();
+                    }
+                },
+                clickIceOrHot() {
+                    this.ice_or_hot = true;
+
+                    if (this.name === true) {
+                        this.youCanSubmit();
+                    }
+                },
+                youCanSubmit() {
+                    this.cannot_submit = false;
+                }
+            },
+        })
+    </script>
+{% endblock vue %}
