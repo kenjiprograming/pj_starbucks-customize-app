@@ -19,8 +19,13 @@ class SearchController extends CI_Controller
         $classifiedDrinks = $this->classifyInKinds($drinks);
 
         $assign = [
-            'drinks' => $classifiedDrinks[$kind]
+            'drinks' => $classifiedDrinks[$kind],
+            'kind' => $kind,
         ];
+
+//        echo '<pre>';
+//        print_r($assign);
+//        exit();
 
         $this->twig->render('/templates/search.html.twig', $assign);
     }
