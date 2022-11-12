@@ -63,6 +63,7 @@
 
             <div class="selection-4">
                 <p class="letscustomize">Let's customize!!</p>
+                <p id="error" style="color: red;">{{ kind }}またはhot or iceが選択されていません。</p> 
                 <input class="btn" type="submit" name="submit" value="カスタマイズする" id="submit"
                        v-bind:disabled="cannot_submit"
                 >
@@ -104,8 +105,17 @@
                 },
                 youCanSubmit() {
                     this.cannot_submit = false;
-                }
+                },
             },
+            watch: {
+                cannot_submit: function(newVal) {
+                    if (newVal === false) {
+                        let error = document.getElementById('error');
+                        error.style.display = 'none';
+                    }
+                }
+
+            }
         })
     </script>
 {% endblock vue %}
