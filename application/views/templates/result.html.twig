@@ -20,6 +20,9 @@
 {% block content %}
     <section id="kv" style="background-image: url({{ imageUrl }});">
         <div class="block">
+            {% if customizes is empty %}
+                <h2 style="color: red;">Sorry, it's coming soon...</h2>
+            {% endif %}
             {% for catchPhrase, customize in customizes %}
                 <div class="contents-blk">
                     <h2>{{ catchPhrase }}</h2>
@@ -27,7 +30,7 @@
                     <div class="items">
                         {% for custom, addPrice in customize %}
                             {% if loop.index0 == 0 %}
-                                <h3>★{{ name }}★</h3>
+                                <p style="margin-top: 60px;">・{{ name }}（¥{{ price }}）</p>
                             {% endif %}
                             <p>・{{ custom }}（+¥{{ addPrice }}）</p>
                         {% endfor %}

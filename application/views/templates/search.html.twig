@@ -20,6 +20,7 @@
 {% block content %}
 
     <h1>Choice your Frappuccino</h1>
+    <p>好きなドリンクを選択後ページ下部にスクロールしてください</p>
 
     <div id="search-wrapper">
         <form action="{{ baseUrl }}result/" method="post">
@@ -28,13 +29,17 @@
                     <div class="container-a">
                         <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}"
                                {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}disabled{% endif %}
-                               @change="clickName"
+                               @change.prevent="clickName"
                         >
                         <label for="{{ index }}">
-                            {{ drink.name|raw }}
-                            {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(準備中){% endif %}
+                            <div class="inner-label">
+                                <p>
+                                    {{ drink.name|raw }}
+                                    {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(coming soon...){% endif %}
+                                </p>
+                                <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt="">
+                            </div>
                         </label>
-                        <p> <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt=""></p>
                     </div>
                     <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
                     <input type="hidden" name="price" value="{{ drink.price }}">
@@ -61,9 +66,9 @@
                 </div>
             </div>
 
-            <div class="selection-4">
+            <div class="selection-4" >
                 <p class="letscustomize">Let's customize!!</p>
-                <p id="error" style="color: red;">{{ kind }}またはhot or iceが選択されていません。</p> 
+                <p id="error" style="color: red;">drink またはhot or iceが選択されていません。</p>
                 <input class="btn" type="submit" name="submit" value="カスタマイズする" id="submit"
                        v-bind:disabled="cannot_submit"
                 >
