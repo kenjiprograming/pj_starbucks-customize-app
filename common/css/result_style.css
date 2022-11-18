@@ -170,7 +170,7 @@ h4 {
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 480px) {
     body {
         line-height: 1.2;
     }
