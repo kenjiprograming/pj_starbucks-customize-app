@@ -1,7 +1,7 @@
 {% extends "./templates/layout.html.twig" %}
 
 {% block title %}
-    | Customizes for you
+    | Options for you
 {% endblock title %}
 
 {% block links%}
@@ -32,12 +32,16 @@
                     <h2>{{ catchPhrase }}</h2>
 
                     <div class="items">
-                        {% for custom, addPrice in customize %}
-                            {% if loop.index0 == 0 %}
-                                <p style="margin-top: 60px;">・{{ name }}（¥{{ price }}）</p>
-                            {% endif %}
-                            <p>・{{ custom }}（+¥{{ addPrice }}）</p>
-                        {% endfor %}
+                        <div class="items-blk">
+                            {% for custom, addPrice in customize %}
+                                {% if loop.index0 == 0 %}
+{#                                    <p>★{{ name }} ¥{{ price }}</p>#}
+                                    <p>★{{ name }}</p>
+                                {% endif %}
+                                <p>・{{ custom }}</p>
+{#                                <p>・{{ custom }} +¥{{ addPrice }}</p>#}
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <h4>-Total Price ¥{{ totalPrices[catchPhrase] }}-</h4>

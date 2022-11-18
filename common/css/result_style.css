@@ -39,8 +39,6 @@ h6 {
     font-weight: 600;
 }
 
-
-
 header {
     height: 120px;
     background: white;
@@ -82,7 +80,6 @@ h1 {
 }
 
 .block {
-
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -95,28 +92,26 @@ h1 {
 }
 
 .items {
-
     width: 400px;
     height: 400px;
     border: 1px solid white;
     background-color: rgb(0,0,0,0.4);
-    border-radius: 200px;
+    border-radius: 20px;
     position: relative;
     z-index: 1;
     margin: auto;
-
 }
 
+.items-blk {
+    margin-top: 40px;
+}
 
 .items p {
     padding: 5px 0;
 }
 
 .contents-blk h2 {
-
     color: white;
-
-
 }
 
 h2 {
@@ -129,17 +124,11 @@ h3 {
 }
 
 h4 {
-
     padding-top: 30px;
     font-size: 1.3rem;
-    /*position:;*/
-
 }
 
-
-
-@media screen and (max-width: 414px) {
-
+@media screen and (min-width:481px) and (max-width:1112px) {
     body {
         line-height: 1.5;
     }
@@ -156,66 +145,103 @@ h4 {
         margin-bottom: 10px;
         font-size: 1.8rem;
         text-decoration: underline;
-
     }
 
     h4 {
         padding-top: 10px;
         padding-bottom: 30px;
+    }
 
+    h3 {
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 
     .items {
         width: 350px;
         height: 350px;
-        border-radius: 175px;
+        border-radius: 20px;
     }
 
     .block {
         display: flex;
         flex-direction: column;
         padding-top: 30px;
+    }
+}
 
+@media screen and (max-width: 414px) {
+    body {
+        line-height: 1.2;
+    }
+
+    h1 {
+        margin: 10px auto 10px;
+        width: auto;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+        text-decoration: underline;
+    }
+
+    h4 {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    .items {
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+    }
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
     }
 
     h3 {
         padding-top: 30px;
         padding-bottom: 10px;
-
     }
 
-
+    p {
+        line-height: 1.5;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    body {
+        line-height: 1;
+    }
 
     .items {
         width: 350px;
         height: 350px;
-        border-radius: 175px;
-
+        border-radius: 20px;
     }
 
     h3 {
         padding-top: 30px;
-
     }
 
-
-
-
-
+    p {
+        line-height: 1.5;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .items {
         width: 300px;
         height: 300px;
-        border-radius: 150px;
-
+        border-radius: 10px;
     }
-
-
 
     h3 {
         padding-top: 30px;
@@ -231,6 +257,4 @@ h4 {
 
 
     }
-
-
 }
