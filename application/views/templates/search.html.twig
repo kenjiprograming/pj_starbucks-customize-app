@@ -1,7 +1,7 @@
 {% extends "./templates/layout.html.twig" %}
 
 {% block title %}
-    Choice your drink
+    | Choice your drink
 {% endblock title %}
 
 {% block links %}
@@ -19,7 +19,7 @@
 
 {% block content %}
 
-    <h1>Choice your Frappuccino</h1>
+    <h1>Choice your {{ kind }}</h1>
     <p>好きなドリンクを選択後ページ下部にスクロールしてください</p>
 
     <div id="search-wrapper">
@@ -37,7 +37,7 @@
                                     {{ drink.name|raw }}
                                     {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(coming soon...){% endif %}
                                 </p>
-                                <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt="">
+                                <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
                             </div>
                         </label>
                     </div>
