@@ -5,6 +5,7 @@
 {% endblock title %}
 
 {% block links%}
+    {{ parent() }}
     <link rel="stylesheet" href="{{ baseUrl }}common/css/result_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
 {% endblock header %}
 
 {% block content %}
-    <section id="kv" style="background-image: url({{ imageUrl }});">
+    <section id="kv" style="background-image: url({{ baseUrl }}common/img/{{ imageUrl }});">
         <div class="block">
             {% if customizes is empty %}
                 <h2 style="color: red;">Sorry, it's coming soon...</h2>

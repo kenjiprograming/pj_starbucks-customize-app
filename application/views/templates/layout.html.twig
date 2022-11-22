@@ -12,6 +12,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     {% endif %}
     {% block links %}
+        <link rel="stylesheet" href="{{ baseUrl }}common/css/base_style.css">
     {% endblock links %}
 
     <!-- Google AdSense Start -->
@@ -41,6 +42,9 @@
 {{ block('vue') }}
 
 {% block footer %}
+    <div class="footer">
+        <p>このwebサイトの商品画像、商品名、商品価格およびカスタマイズ名、カスタマイズ価格は<a href="https://www.starbucks.co.jp/">Starbucks Coffee Japan - スターバックス コーヒー ジャパン</a>様より引用。</p>
+    </div>
 {% endblock footer %}
 
 </body>

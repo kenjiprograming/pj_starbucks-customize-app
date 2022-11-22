@@ -5,6 +5,7 @@
 {% endblock title %}
 
 {% block links %}
+    {{ parent() }}
     <link rel="stylesheet" href="{{ baseUrl }}common/css/search_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +38,7 @@
                                     {{ drink.name|raw }}
                                     {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(coming soon...){% endif %}
                                 </p>
-                                <img style="max-width:300px; border-radius:150px;" src="{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
+                                <img style="max-width:300px; border-radius:150px;" src="{{ baseUrl }}common/img/{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
                             </div>
                         </label>
                     </div>
