@@ -32,7 +32,7 @@
                                {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}disabled{% endif %}
                                @change.prevent="clickName"
                         >
-                        <label for="{{ index }}">
+                        <label for="{{ index }}" @click="scroll()">
                             <div class="inner-label">
                                 <p>
                                     {{ drink.name|raw }}
@@ -61,7 +61,7 @@
 
                 <div class="container-b">
                     <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice" {% if kind == 'frappuccino' %}checked{% endif %}
-                           @click="clickIceOrHot"
+                           @click.prevent="clickIceOrHot"
                     >
                     <label for="h">Ice</label>
                 </div>
@@ -112,6 +112,14 @@
                 youCanSubmit() {
                     this.cannot_submit = false;
                 },
+                scroll() {
+                    let element = document.documentElement;
+                    let bottom = element.scrollHeight - element.clientHeight;
+                    window.scrollTo({
+                        top: bottom,
+                        behavior: 'smooth'
+                    });
+                }
             },
             watch: {
                 cannot_submit: function(newVal) {
