@@ -1,5 +1,56 @@
-.footer {
+@charset "UTF-8";
+
+/*---------------------------------------default*/
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5;
+}
+
+/*-------------------------------------------------------------All*/
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #797e81;
+    font-family: 'Courgette', 'Klee One', cursive, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+
+
+footer {
+    background-color: white;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    color: #d0d0d0;
+    font-size: 0.6rem;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #6d9b69;
 }

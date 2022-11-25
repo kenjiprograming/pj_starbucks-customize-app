@@ -12,6 +12,9 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     {% endif %}
     {% block links %}
+        <link rel="icon" type="image/png" href="{{ baseUrl }}common/img/cysicon.ico" />
+        <link rel="apple-touch-icon" href="{{ baseUrl }}common/img/cysicon.ico">
+
         <link rel="stylesheet" href="{{ baseUrl }}common/css/base_style.css">
     {% endblock links %}
 
@@ -39,13 +42,14 @@
 
 {{ block('content') }}
 
-{{ block('vue') }}
 
 {% block footer %}
-    <div class="footer">
-        <p>このwebサイトの商品画像、商品名、商品価格およびカスタマイズ名、カスタマイズ価格は<a href="https://www.starbucks.co.jp/">Starbucks Coffee Japan - スターバックス コーヒー ジャパン</a>様より引用。</p>
-    </div>
+    <footer>
+        <p>このwebサイトの商品画像、商品名、商品価格およびカスタマイズ名、カスタマイズ価格は<a href="https://www.starbucks.co.jp/">Starbucks Coffee Japan - スターバックス コーヒー ジャパン</a>より引用。</p>
+    </footer>
 {% endblock footer %}
+
+{{ block('vue') }}
 
 </body>
 </html>
