@@ -51,19 +51,28 @@
             </div>
 
             <div class="container-2">
-                <div class="container-b">
-                    <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot" {% if kind == 'frappuccino' %}disabled{% endif %}
-                           @click="clickIceOrHot"
-                    >
-                    <label for="g">Hot</label>
-                </div>
+                {% if kind == 'frappuccino' %}
+                    <div class="container-b">
+                        <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice" checked
+                               @click="clickIceOrHot"
+                        >
+                        <label for="h">Ice</label>
+                    </div>
+                {% else %}
+                    <div class="container-b">
+                        <input class="btn" id="g" type="radio" name="ice_or_hot" value="hot"
+                               @click="clickIceOrHot"
+                        >
+                        <label for="g">Hot</label>
+                    </div>
+                    <div class="container-b">
+                        <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice"
+                               @click="clickIceOrHot"
+                        >
+                        <label for="h">Ice</label>
+                    </div>
+                {% endif %}
 
-                <div class="container-b">
-                    <input class="btn" id="h" type="radio" name="ice_or_hot" value="ice" {% if kind == 'frappuccino' %}checked{% endif %}
-                           @click.prevent="clickIceOrHot"
-                    >
-                    <label for="h">Ice</label>
-                </div>
             </div>
 
             <div class="selection-4" >
