@@ -22,6 +22,32 @@
     </header>
 {% endblock header %}
 
+{% block breadcrumb %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ baseUrl }}">
+                <span itemprop="name">top</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ baseUrl }}search/{{ kind }}">
+                <span itemprop="name">{{ kind }}</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <span itemprop="name">{{ name }}</span>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+{% endblock breadcrumb %}
+
 {% block content %}
     <section id="kv" style="background-image: url({{ baseUrl }}common/img/{{ imageUrl }});">
         <div class="block">

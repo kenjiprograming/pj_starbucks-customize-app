@@ -23,6 +23,7 @@ class ResultController extends CI_Controller
 
         $ice_or_hot    = $post['ice_or_hot'];
 
+        $kind       = $drink['kind'];
         $name       = $drink['name'];
         $price      = $drink['price'];
         $imageUrl   = $drink['imageUrl'];
@@ -43,6 +44,7 @@ class ResultController extends CI_Controller
         $assign = [
             'customizes' => $customizes[$ice_or_hot],
             'totalPrices' => $totalPrices,
+            'kind' => $kind,
             'name' => $name,
             'price' => $price,
             'imageUrl' => $imageUrl,
