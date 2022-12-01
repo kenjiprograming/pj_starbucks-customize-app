@@ -16,6 +16,10 @@
 {% endblock links %}
 
 {% block header %}
+    <header>
+        <h1>Choice your {{ kind }}!</h1>
+        <p>Drink {% if kind != 'frappuccino' %} と Hot or Ice{% endif %} を選びましょう！</p>
+    </header>
 {% endblock header %}
 
 {% block breadcrumb %}
@@ -40,8 +44,6 @@
 
 {% block content %}
 
-    <h1>Choice your {{ kind }}</h1>
-
     <div id="search-wrapper">
         <form action="{{ baseUrl }}result/" method="post">
             <div class="container">
@@ -55,7 +57,7 @@
                             <div class="inner-label">
                                 <p>
                                     {{ drink.name|raw }}
-                                    {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}(coming soon...){% endif %}
+                                    {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}<br>(coming soon...){% endif %}
                                 </p>
                                 <img style="max-width:300px; border-radius:150px;" src="{{ baseUrl }}common/img/{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
                             </div>
@@ -67,7 +69,7 @@
             </div>
 
             <div class="selection-2">
-                <h1>Choice hot or ice</h1>
+                <h1>Choice Hot or Ice</h1>
             </div>
 
             <div class="container-2">
@@ -97,7 +99,7 @@
 
             <div class="selection-4" >
                 <p class="letscustomize">Let's customize!!</p>
-                <p id="error" style="color: red;">drink またはhot or iceが選択されていません。</p>
+                <p id="error" style="color: red;">drink またはHot or Iceが選択されていません。</p>
                 <input class="btn" type="submit" name="submit" value="カスタマイズする" id="submit"
                        v-bind:disabled="cannot_submit"
                 >
