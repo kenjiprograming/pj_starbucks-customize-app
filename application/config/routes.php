@@ -53,5 +53,6 @@ $route['default_controller'] = 'TopController';
 $route['404_override'] = 'errors/error_404';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['privacy-policy'] = 'TopController/privacy_policy';
 $route['search/(:any)'] = 'SearchController/index/$1';
 $route['result'] = 'ResultController/index';

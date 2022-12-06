@@ -1,0 +1,77 @@
+{% extends "./templates/layout.html.twig" %}
+
+{% block title %}Privacy Policy{% endblock title %}
+
+{% block header %}
+    <header>
+        <h1>プライバシーポリシー</h1>
+    </header>
+{% endblock header %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ baseUrl }}">
+                <span itemprop="name">top</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <span itemprop="name">プライバシーポリシー</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+{% endblock breadcrumb %}
+
+{% block content %}
+    <div class="privacy-policy-wrapper">
+        <div>
+            <h2>個人情報の利用目的</h2>
+            <p>当サイトでは、お問い合わせの際、名前やメールアドレス等の個人情報を入力いただく場合がございます。<br>
+                取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどをでご連絡する場合に利用させていただくものであり、これらの目的以外では利用いたしません。</p>
+        </div>
+
+        <div>
+            <h2>広告について</h2>
+            <p>当サイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net）を利用しており、ユーザーの興味に応じた商品やサービスの広告を表示するため、クッキー（Cookie）を使用しております。<br>
+                クッキーを使用することで当サイトはお客様のコンピュータを識別できるようになりますが、お客様個人を特定できるものではありません。<br>
+                Cookieを無効にする方法やGoogleアドセンスに関する詳細は <a href="https://policies.google.com/technologies/ads?gl=jp" target="_blank">「広告 – ポリシーと規約 – Google」</a> をご確認ください。</p>
+        </div>
+
+        <div>
+            <h2>アクセス解析ツールについて</h2>
+            <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。<br>
+                このGoogleアナリティクスはトラフィックデータの収集のためにクッキー（Cookie）を使用しております。<br>
+                トラフィックデータは匿名で収集されており、個人を特定するものではありません。</p>
+        </div>
+
+        <div>
+            <h2>免責事項</h2>
+            <p>当サイトからのリンクやバナーなどで移動したサイトで提供される情報、サービス等について一切の責任を負いません。<br>
+                また当サイトのコンテンツ・情報について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。情報が古くなっていることもございます。<br>
+                当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
+        </div>
+
+        <div>
+            <h2>著作権について</h2>
+            <p>当サイトで掲載している文章や画像などにつきましては、無断転載することを禁止します。<br>
+                当サイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、迅速に対応いたします。</p>
+        </div>
+
+        <div>
+            <h2>リンクについて</h2>
+            <p>当サイトは基本的にリンクフリーです。リンクを行う場合の許可や連絡は不要です。<br>
+                ただし、インラインフレームの使用や画像の直リンクはご遠慮ください。</p>
+        </div>
+    </div>
+
+    <div>
+        <p><a href="{{ baseUrl }}">topへ戻る</a></p>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

@@ -17,4 +17,9 @@ class TopController extends CI_Controller
         $this->twig->render('/templates/top.html.twig', $assign);
     }
 
+    public function privacy_policy(): void
+    {
+        $this->twig->render('/templates/privacy-policy.html.twig');
+    }
+
 }

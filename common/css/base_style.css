@@ -70,6 +70,14 @@ h6 {
     text-decoration: underline;
 }
 
+.privacy-policy-wrapper {
+    padding: 20px;
+    text-align: left;
+}
+.privacy-policy-wrapper div {
+    margin-bottom: 10px;
+}
+
 footer {
     background-color: white;
     display: flex;
