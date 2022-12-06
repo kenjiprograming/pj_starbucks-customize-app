@@ -50,6 +50,37 @@ h1 {
     z-index: 10;
 }
 
+.recommend-p {
+    width: 100px;
+    position: relative;
+    border: 3px solid #068e0c;
+    border-radius: 10px;
+}
+
+.recommend-p:before {
+    position: absolute;
+    bottom: -14px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 14px 12px 0 12px;
+    border-style: solid;
+    border-color: #d8d8d8 transparent transparent transparent;
+}
+
+.recommend-p:after {
+    position: absolute;
+    bottom: -10px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 14px 12px 0 12px;
+    border-style: solid;
+    border-color: #068e0c transparent transparent transparent;
+}
+
 .items {
     width: 400px;
     height: 400px;

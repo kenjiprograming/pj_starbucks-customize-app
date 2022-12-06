@@ -28,6 +28,7 @@ class ResultController extends CI_Controller
         $price      = $drink['price'];
         $imageUrl   = $drink['imageUrl'];
         $customizes = $drink['customizes'];
+        $recommend = $drink['recommend'];
 
         $totalPrices = [];
 
@@ -42,17 +43,15 @@ class ResultController extends CI_Controller
         }
 
         $assign = [
-            'customizes' => $customizes[$ice_or_hot],
+            'customizes'  => $customizes[$ice_or_hot],
             'totalPrices' => $totalPrices,
-            'kind' => $kind,
-            'name' => $name,
-            'price' => $price,
-            'imageUrl' => $imageUrl,
+            'kind'        => $kind,
+            'name'        => $name,
+            'price'       => $price,
+            'imageUrl'    => $imageUrl,
+            'ice_or_hot'  => $ice_or_hot,
+            'recommend'   => $recommend,
         ];
-
-//        echo '<pre>';
-//        print_r($assign);
-//        exit();
 
         $this->twig->render('/templates/result.html.twig', $assign);
     }

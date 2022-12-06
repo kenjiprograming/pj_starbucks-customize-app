@@ -56,6 +56,9 @@
             {% endif %}
             {% for catchPhrase, customize in customizes %}
                 <div class="contents-blk">
+                    {% if loop.index0 == recommend[ice_or_hot] %}
+                        <p class="recommend-p"><span class="recommend-span">特におすすめ</span></p>
+                    {% endif %}
                     <h2>{{ catchPhrase }}</h2>
 
                     <div class="items">

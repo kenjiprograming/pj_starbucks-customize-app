@@ -22,6 +22,10 @@ $config['drinks'] = [
 クリームとパイが何層にも重なり合うミルフィーユをモチーフにした、デザート感たっぷりのフラペチーノです。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => 1,
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 '濃厚キャラメルスイーツ風' => [
@@ -33,7 +37,7 @@ $config['drinks'] = [
                     'チョコチップ追加で上に' => 55,
                     'チョコソース追加' => 0,
                 ],
-                '超カスタ-ドスイーツ風' => [
+                '超カスタードスイーツ風' => [
                     'ブレベミルクに変更' => 55,
                     'バニラシロップ追加' => 55,
                 ],
@@ -51,6 +55,10 @@ $config['drinks'] = [
 クリームとパイが何層にも重なり合うミルフィーユをモチーフにした、ホリデーシーズンにぴったりなラテです。まろやかでコクのある味わいを楽しみながら、ゆったり暖まってみてはいかがでしょうか。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => 2,
+        ],
         'customizes' => [
             'ice' => [
 //                '超スイーツ感濃厚キャラメル風' => [
@@ -90,6 +98,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ストロベリーショートケーキ風' => [
@@ -125,6 +137,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'イチゴミルク風' => [
@@ -161,6 +177,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ミルクプリン風' => [
@@ -205,6 +225,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ソイキャラメル風' => [
@@ -246,6 +270,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -287,6 +315,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -318,6 +350,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -345,6 +381,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -372,6 +412,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -399,6 +443,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -431,6 +479,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -458,6 +510,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -487,6 +543,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -514,6 +574,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -541,6 +605,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -568,6 +636,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -607,6 +679,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -634,6 +710,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'チョコレートスイーツ風' => [
@@ -677,6 +757,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'アーモンドナッツホワイトチョコ風' => [
@@ -709,6 +793,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 '濃厚キャラメル風' => [
@@ -753,6 +841,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -780,6 +872,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -807,6 +903,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -834,6 +934,10 @@ $config['drinks'] = [
         'text' => 'キャラメルのような甘く力強い味とナッツを感じさせる後味。ふわふわのフォームミルクをのせることでミルクの優しい甘さが、エスプレッソを引き立てます。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -876,6 +980,10 @@ $config['drinks'] = [
         'text' => 'ノンファットミルクでつくった、ふんわりきめ細やかで弾力もある質感のムース フォームをやさしく注いだ、ダブルショットのラテです。ムース フォームは、ノンファットミルクで作られているとは思えないほど重厚感のある口当たりで、ふんわりとした質感とミルクの甘味をお楽しみいただけます。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -907,6 +1015,10 @@ $config['drinks'] = [
         'text' => 'ひと口目に感じるエスプレッソは「リストレット」という方法で抽出した力強い香りと優しい苦味を、ふた口目は全体を混ぜて、こだわりのクリームから来るアフォガートのような味わいをお楽しみください。リフレッシュしたい時や、ほっとひと息つきたい時にも、何度でも飲みたくなるフラペチーノです。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ダークチョコ風' => [
@@ -944,6 +1056,10 @@ $config['drinks'] = [
         'text' => 'コーヒー、ミルクを氷とブレンドした、シンプルながらもコーヒーのおいしさを楽しめるフラペチーノです。そのまま味わうのはもちろん、シロップなどをカスタマイズして、自分好みのコーヒー フラペチーノに仕上げるのもおすすめです。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'アーモンドチョコ風' => [
@@ -978,6 +1094,10 @@ $config['drinks'] = [
         'text' => 'コーヒー、ミルク、ダークチョコレートパウダー、チョコレートチップを氷とブレンドした、チョコレートラバーズにおすすめのフラペチーノ。コーヒーとダークチョコレートのほろ苦い味わいと、チョコレートチップの食感が織り成すハーモニーをお楽しみください。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
        'customizes' => [
            'ice' => [
                '大人ばりチョコ再現風' => [
@@ -1015,6 +1135,10 @@ $config['drinks'] = [
         'text' => 'コーヒー、ミルク、キャラメルシロップを氷とブレンドした、多くのお客様に愛されているフラペチーノです。トッピングしたホイップクリームとキャラメルソースと混ぜながら、豊かでほんのり香ばしいキャラメルの風味をお楽しみください。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 '焦がしキャラメル風' => [
@@ -1049,6 +1173,10 @@ $config['drinks'] = [
         'text' => '世界中で様々な形で飲用されている抹茶ですが、スターバックスではミルクと氷でブレンドしたリフレッシングなフラペチーノに仕上げました。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 '金の抹茶風' => [
@@ -1083,6 +1211,10 @@ $config['drinks'] = [
         'text' => 'ミルクとバニラシロップを氷とブレンドし、ホイップクリームをトッピングした、クリーミーな味わいのフラペチーノ。真っ白な見た目も爽やかです。ミルクとバニラシロップというシンプルな組み合わせはいろいろなカスタマイズとも好相性。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'レモンヨーグルト風' => [
@@ -1119,6 +1251,10 @@ $config['drinks'] = [
         'text' => 'ミルク、ダークチョコレートパウダー、そして人気のチョコレートチップを氷とブレンドした、クリーミーな味わいのフラペチーノ。お好みでチョコレートソースをトッピングして、よりチョコレートの風味を強めることも。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ビターチョコ風' => [
@@ -1155,6 +1291,10 @@ $config['drinks'] = [
         'text' => 'マンゴーとパッションフルーツのトロピカル感あふれる味わいに、ハイビスカスティーと氷をブレンドした、フルーティーな味わいのフラペチーノ。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'パイナップル風' => [
@@ -1193,6 +1333,10 @@ $config['drinks'] = [
 さわやかで香り豊かなティービバレッジで、リラックスしたひとときをお過ごしください。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'はちみつハイビスカス風' => [
@@ -1232,6 +1376,10 @@ $config['drinks'] = [
         'text' => '紅茶の味わいにスパイスを効かせたオリジナルシロップと、ミルクのバランスが絶妙に調和したティー ラテ。まろやかなスパイス感と深いコクが特徴のティー ラテです。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 'ふわあまチャイティー風' => [
@@ -1278,6 +1426,10 @@ $config['drinks'] = [
         'text' => '日本で古くから親しまれているほうじ茶をミルクとの相性を追求して誕生したティー ラテ。ミルクの甘い香りの中に、香ばしい香りがしっかりと漂う、甘さ控えめのティーラテです。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 
@@ -1309,6 +1461,10 @@ $config['drinks'] = [
         'text' => 'こだわり抜いた抹茶とミルクを合わせた人気のラテ。ほろ苦い抹茶にほどよく甘みをプラスすることで、より深い味わいが楽しめます。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1351,6 +1507,10 @@ $config['drinks'] = [
         'text' => '紅茶の伝統的な味わいがラテスタイルで楽しめます。ミルクとの相性を考えてブレンドしたティーに、温かなスチームミルクとふんわりフォームミルクで仕上げました。上品な香りと優しい風味が特徴です。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1393,6 +1553,10 @@ $config['drinks'] = [
         'text' => '鮮やかなシトラスに、カモミールとラベンダーの柔らかな香りをブレンドした香り豊かなノンカフェインのティー ラテ。一口飲むとミルクの甘さの中に華やかな香りを感じることができます。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1435,6 +1599,10 @@ $config['drinks'] = [
         'text' => 'ラベンダーの香り華やぐアールグレイに温かなスチームミルクとふんわりフォームミルクで仕上げました。バニラシロップで甘さを加えることで、より華やかな印象です。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1481,6 +1649,10 @@ $config['drinks'] = [
 ミルクの甘い香りの中に、さわやかで上質な香りが漂うティー ラテで、リラックスしたひとときをお過ごしください。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1508,6 +1680,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1537,6 +1713,10 @@ $config['drinks'] = [
         'text' => 'ハイビスカス、オレンジピール、シナモン、リコリス等がブレンドされた鮮やかな赤色のノンカフェインのハーブティーです。',
         'ice' => true,
         'hot' => false,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
                 '超さっぱり風' => [
@@ -1566,6 +1746,10 @@ $config['drinks'] = [
         'text' => '紅茶の伝統的な味が楽しめるブレンドです。インド産の茶葉をベースに、スリランカ産などの茶葉を加え、上品な香りが引き立ちます。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1602,6 +1786,10 @@ $config['drinks'] = [
         'text' => 'アール グレイを香り豊かなベルガモットエッセンスで香り付けした、華やかなブラックティーのブレンドです。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1629,6 +1817,10 @@ $config['drinks'] = [
         'text' => '鮮やかなシトラスに、カモミールとラベンダーの柔らかな香りをブレンドしたノンカフェインティー。優しいフローラルの香りが特長です。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1669,6 +1861,10 @@ $config['drinks'] = [
         'text' => 'パイナップルやマンゴーなどをブレンドしたホワイトティーです。ハイビスカスと酸味のあるアップルでバランスのとれた味わいに仕上げました。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1696,6 +1892,10 @@ $config['drinks'] = [
         'text' => '日本で古くから親しまれているほうじ茶をスターバックスで楽しめます。香ばしく豊かな風味を追及し、こだわり抜いた茶葉をブレンドしています。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1724,6 +1924,10 @@ $config['drinks'] = [
 中国の山深く、雲と霧という天然の天蓋に覆われた標高約850メートルの茶畑で、ゆっくりと豊かな風味を凝縮させながら育った茶葉を使っています。',
         'ice' => false,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1792,6 +1996,10 @@ $config['drinks'] = [
         'text' => 'チョコレートシロップにミルクが調和し、やさしい甘さに仕上げました。ホットはホイップクリームがほどよく溶けてまろやかな口当たりです。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1834,6 +2042,10 @@ $config['drinks'] = [
         'text' => 'キャラメル風味の温かいミルクの上に、ホイップクリームとキャラメルソースをトッピングしました。ミルキーな甘さとキャラメルの風味を存分に楽しめます。',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1861,6 +2073,10 @@ $config['drinks'] = [
         'text' => '',
         'ice' => true,
         'hot' => true,
+        'recommend' => [
+            'ice' => '',
+            'hot' => '',
+        ],
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
