@@ -18,7 +18,8 @@
 {% block header %}
     <header>
         <h1>Options for you!</h1>
-        <p class="lead">おすすめのカスタマイズ！</p>
+        <p class="lead">おすすめのカスタマイズはこれだ！</p>
+        <h4>お気に入りのカスタマイズを<br>書いてある通りに<br>店員さんに伝えてみよう！</h4>
     </header>
 {% endblock header %}
 
@@ -53,30 +54,38 @@
         <div class="block">
             {% if customizes is empty %}
                 <h2 style="color: red;">Sorry, it's coming soon...</h2>
-            {% endif %}
-            {% for catchPhrase, customize in customizes %}
-                <div class="contents-blk">
-                    {% if loop.index0 == recommend[ice_or_hot] %}
-                        <p class="recommend-p"><span class="recommend-span">特におすすめ</span></p>
-                    {% endif %}
-                    <h2>{{ catchPhrase }}</h2>
+            {% else %}
 
-                    <div class="items">
-                        <div class="items-blk">
-                            {% for custom, addPrice in customize %}
-                                {% if loop.index0 == 0 %}
-{#                                    <p>★{{ name }} ¥{{ price }}</p>#}
-                                    <p>★{{ name }}</p>
-                                {% endif %}
-                                <p>・{{ custom }}</p>
-{#                                <p>・{{ custom }} +¥{{ addPrice }}</p>#}
-                            {% endfor %}
+                {% for catchPhrase, customize in customizes %}
+                    <div class="contents-blk">
+
+                        {% if loop.index0 == recommend[ice_or_hot] %}
+                            <p class="recommend-p"><span class="recommend-span">特におすすめ</span></p>
+                        {% endif %}
+
+                        <h2>{{ catchPhrase }}</h2>
+
+                        <div class="items">
+                            <div class="items-blk">
+                                {% for custom, addPrice in customize %}
+                                    {% if loop.index0 == 0 %}
+    {#                                    <p>★{{ name }} ¥{{ price }}</p>#}
+                                        <p>{% if ice_or_hot == 'ice'%}アイス{% else %}ホット{% endif%} トールサイズの</p>
+                                        <p>★{{ name }}</p>
+                                        <p>カスタマイズを</p>
+                                    {% endif %}
+                                    <p>・{{ custom }}</p>
+    {#                                <p>・{{ custom }} +¥{{ addPrice }}</p>#}
+                                {% endfor %}
+                                <p>でお願いします</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <h4>-Total Price ¥{{ totalPrices[catchPhrase] }}-</h4>
-                </div>
-            {% endfor %}
+                        <h4>-Total Price ¥{{ totalPrices[catchPhrase] }}-</h4>
+
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </section>
 {% endblock content %}
