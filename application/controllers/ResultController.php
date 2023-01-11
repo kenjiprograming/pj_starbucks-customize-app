@@ -15,7 +15,7 @@ class ResultController extends CI_Controller
         $this->load->config('data');
     }
 
-    public function index(): void
+    public function index($kind): void
     {
         $post = $_POST;
 
@@ -23,7 +23,6 @@ class ResultController extends CI_Controller
 
         $ice_or_hot    = $post['ice_or_hot'];
 
-        $kind       = $drink['kind'];
         $name       = $drink['name'];
         $price      = $drink['price'];
         $imageUrl   = $drink['imageUrl'];

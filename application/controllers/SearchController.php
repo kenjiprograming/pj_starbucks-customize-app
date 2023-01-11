@@ -23,10 +23,6 @@ class SearchController extends CI_Controller
             'kind' => $kind,
         ];
 
-//        echo '<pre>';
-//        print_r($assign);
-//        exit();
-
         $this->twig->render('/templates/search.html.twig', $assign);
     }
 

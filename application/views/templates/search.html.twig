@@ -43,7 +43,7 @@
 {% block content %}
 
     <div id="search-wrapper">
-        <form action="{{ baseUrl }}result/" method="post">
+        <form action="{{ baseUrl }}result/{{ kind }}" method="post">
             <div class="container">
                 {% for index,drink in drinks %}
                     <div class="container-a">
