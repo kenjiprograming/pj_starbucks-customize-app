@@ -18,7 +18,11 @@
 {% block header %}
     <header>
         <h1>Choice your {{ kind }}!</h1>
-        <p>Drink {% if kind != 'frappuccino' %} と Hot or Ice{% endif %} を選びましょう！</p>
+        <div class="header-text">
+            <p>Step1. 飲みたい {{ kind }} を選びましょう！</p>
+            {% if kind != 'frappuccino' %}<p>Step2. Hot か Ice のどちらかを選びましょう！</p>{% endif %}
+            <p>「<span class="shouhinmei">商品名</span>→商品画像→<span class="catchcopy">スタバ公式のキャッチコピー</span>→<span class="officialtext">スタバ公式の説明</span>→<span class="impression">私達の飲んだ印象</span>」<br>の順で上から説明を書いてありますので、<br>一読頂けると面白いし、より味を分かって頂けるはず、、、？です。</p>
+        </div>
     </header>
 {% endblock header %}
 
@@ -53,11 +57,15 @@
                         >
                         <label for="{{ index }}" @click="scroll()">
                             <div class="inner-label">
-                                <p>
+                                <p class="drink-title">
                                     {{ drink.name|raw }}
                                     {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}<br>(coming soon...){% endif %}
                                 </p>
                                 <img style="max-width:300px; border-radius:150px;" src="{{ baseUrl }}common/img/{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
+                                <p class="drink-subtitle">{{ drink.title }}</p>
+                                <p class="drink-text">{{ drink.text }}</p>
+                                {# todo: impressionの実装追加する #}
+                                <p class="drink-impression">xxx</p>
                             </div>
                         </label>
                     </div>

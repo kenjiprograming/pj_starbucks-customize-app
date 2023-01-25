@@ -1,10 +1,30 @@
 h1 {
   color: #535353;
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin: 20px 40px;
   box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  text-align: center;
+}
+
+.header-text {
+  margin: 10px;
+}
+
+.header-text p {
+  margin: 10px;
+}
+
+.header-text .shouhinmei {
+  color: #068e0c;
+  font-weight: bold;
+}
+.header-text .catchcopy {
+  color: #068e0c;
+}
+.header-text .officialtext {
+  color: #555;
+}
+.header-text .impression {
+  color: purple;
 }
 
 img {
@@ -26,7 +46,6 @@ img {
 .container-a {
   width: 30%;
   justify-content: center;
-  padding-top: 30px;
 }
 
 .container-a label  {
@@ -45,7 +64,7 @@ img {
   cursor: pointer;
 }
 
-.container-a input[type="radio"]:checked ~ label div  {
+.container-a input[type="radio"]:checked ~ label div {
   padding-top: 3px;
   border-radius: 10px;
   color: white;
@@ -54,6 +73,32 @@ img {
 
 .container-a input {
   display: none;
+}
+
+.container-a label .inner-label .drink-title {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container-a label .inner-label .drink-subtitle {
+  margin: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.container-a label .inner-label .drink-text {
+  margin: 10px;
+  font-size: 13px;
+  color: #555;
+  text-align: left;
+}
+
+.container-a label .inner-label .drink-impression {
+  margin: 10px;
+  font-size: 13px;
+  color: purple;
+  text-align: left;
 }
 
 p {
