@@ -19,9 +19,12 @@
     <header>
         <h1>Options for you!</h1>
         <div class="header-text">
-            <p class="lead">おすすめのカスタマイズはこれだ！</p>
-            <p>Step1. 気になるカスタマイズをタップ(クリック)！</p>
-            <p>Step2. 浮かび上がってきたものを店員さんに伝える！</p>
+            <p class="lead">おすすめのカスタマイズはこれだ!</p>
+            <p> 気になるカスタマイズはありましたか？</p>
+            <p>心配要りません!!</p>
+            <p>店員さんはしっかり聞き取ってくれます!!</p>
+{#            <p>Step1. 気になるカスタマイズをタップ(クリック)！</p>#}
+{#            <p>Step2. 浮かび上がってきたものを店員さんに伝える！</p>#}
         </div>
     </header>
 {% endblock header %}
@@ -72,7 +75,7 @@
                             <div class="items-blk">
                                 {% for custom, addPrice in customize %}
                                     {% if loop.index0 == 0 %}
-                                        <p>{% if ice_or_hot == 'ice'%}アイス{% else %}ホット{% endif%} トールサイズ の</p>
+                                        <p>{% if ice_or_hot == 'ice' %}アイス{% else %}ホット{% endif %} トールサイズ の</p>
                                         <p class="name">★{{ name }}</p>
                                         <p>カスタマイズを</p>
                                     {% endif %}
