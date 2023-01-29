@@ -18,8 +18,11 @@
 {% block header %}
     <header>
         <h1>Options for you!</h1>
-        <p class="lead">おすすめのカスタマイズはこれだ！</p>
-        <h4>お気に入りのカスタマイズを<br>書いてある通りに<br>店員さんに伝えてみよう！</h4>
+        <div class="header-text">
+            <p class="lead">おすすめのカスタマイズはこれだ！</p>
+            <p>Step1. 気になるカスタマイズをタップ(クリック)！</p>
+            <p>Step2. 浮かび上がってきたものを店員さんに伝える！</p>
+        </div>
     </header>
 {% endblock header %}
 
@@ -69,19 +72,17 @@
                             <div class="items-blk">
                                 {% for custom, addPrice in customize %}
                                     {% if loop.index0 == 0 %}
-    {#                                    <p>★{{ name }} ¥{{ price }}</p>#}
-                                        <p>{% if ice_or_hot == 'ice'%}アイス{% else %}ホット{% endif%} トールサイズの</p>
-                                        <p>★{{ name }}</p>
+                                        <p>{% if ice_or_hot == 'ice'%}アイス{% else %}ホット{% endif%} トールサイズ の</p>
+                                        <p class="name">★{{ name }}</p>
                                         <p>カスタマイズを</p>
                                     {% endif %}
-                                    <p>・{{ custom }}</p>
-    {#                                <p>・{{ custom }} +¥{{ addPrice }}</p>#}
+                                    <p class="custom">・{{ custom }}</p>
                                 {% endfor %}
-                                <p>でお願いします</p>
+                                <p>でお願いします。</p>
                             </div>
                         </div>
 
-                        <h4>-Total Price ¥{{ totalPrices[catchPhrase] }}-</h4>
+                        <h4>- Total Price ¥{{ totalPrices[catchPhrase] }} -</h4>
 
                     </div>
                 {% endfor %}
