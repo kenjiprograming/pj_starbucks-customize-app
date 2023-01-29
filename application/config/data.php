@@ -19,6 +19,7 @@ $config['drinks'] = [
         'imageUrl' => '4524785525955_1_m.jpg',
         'title' => 'フォンダンショコラをイメージしたフラペチーノ',
         'text' => 'ガトーショコラをミルクと氷とブレンドし、カップに入れたベイクドチョコレートソースの上に注ぎ入れ、ホイップクリーム、ベイクドチョコレートソース、ガトーショコラクラムをトッピングしました。一口目からフォンダンショコラのような素材感を感じられる、チョコレート好きにはたまらないフラペチーノです。',
+        'impression' => '結構フォンダンショコラを再現しているすごい。。。もっとフォンダンショコラに近づけるカスタムとチョコ好き甘党さん向けのカスタムを考えてみたから是非お試しあれ。',
         'ice' => true,
         'hot' => false,
         'recommend' => [
@@ -320,6 +321,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'ソイキャラメル風' => [
@@ -365,6 +367,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -410,6 +413,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -445,6 +449,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -476,6 +481,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -507,6 +513,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -538,6 +545,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -574,6 +582,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -605,6 +614,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -638,6 +648,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -669,6 +680,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -700,6 +712,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -731,6 +744,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -774,6 +788,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -805,6 +820,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'チョコレートスイーツ風' => [
@@ -852,6 +868,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'アーモンドナッツホワイトチョコ風' => [
@@ -888,6 +905,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 '濃厚キャラメル風' => [
@@ -936,6 +954,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -967,6 +986,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -998,6 +1018,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1029,6 +1050,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1075,6 +1097,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1110,6 +1133,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'ダークチョコ風' => [
@@ -1151,6 +1175,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'アーモンドチョコ風' => [
@@ -1189,6 +1214,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
        'customizes' => [
            'ice' => [
                '大人ばりチョコ再現風' => [
@@ -1230,6 +1256,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 '焦がしキャラメル風' => [
@@ -1268,6 +1295,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 '金の抹茶風' => [
@@ -1306,6 +1334,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'レモンヨーグルト風' => [
@@ -1346,6 +1375,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'ビターチョコ風' => [
@@ -1386,6 +1416,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'パイナップル風' => [
@@ -1428,6 +1459,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'はちみつハイビスカス風' => [
@@ -1471,6 +1503,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 'ふわあまチャイティー風' => [
@@ -1521,6 +1554,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 
@@ -1556,6 +1590,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1602,6 +1637,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1648,6 +1684,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1694,6 +1731,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1744,6 +1782,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1775,6 +1814,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -1808,6 +1848,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
                 '超さっぱり風' => [
@@ -1841,6 +1882,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1881,6 +1923,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1912,6 +1955,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1956,6 +2000,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -1987,6 +2032,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -2019,6 +2065,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -2091,6 +2138,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
         'customizes' => [
             'ice' => [
 //                '' => [
@@ -2137,6 +2185,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [
@@ -2168,6 +2217,7 @@ $config['drinks'] = [
             'ice' => '',
             'hot' => '',
         ],
+        'impression' => '',
 //        'customizes' => [
 //            'ice' => [
 //                '' => [

@@ -64,8 +64,7 @@
                                 <img style="max-width:300px; border-radius:150px;" src="{{ baseUrl }}common/img/{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
                                 <p class="drink-subtitle">{{ drink.title }}</p>
                                 <p class="drink-text">{{ drink.text }}</p>
-                                {# todo: impressionの実装追加する #}
-                                <p class="drink-impression">xxx</p>
+                                <p class="drink-impression">{% if drink.impression is empty %}熟考中...{% else %}{{ drink.impression }}{% endif %}</p>
                             </div>
                         </label>
                     </div>
