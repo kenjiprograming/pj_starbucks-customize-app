@@ -1,6 +1,6 @@
 <?php
 $config['kinds'] = [
-    'coffee',
+//    'coffee',
     'espresso',
     'frappuccino',
     'tea',
