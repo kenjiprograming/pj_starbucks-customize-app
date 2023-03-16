@@ -2,18 +2,19 @@
 
 /**
  * @property $twig
+ * @property $config
  */
 class TopController extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
+        $this->load->config('data');
     }
 
     public function index(): void
     {
-        $assign['a'] = 'aa';
-
+        $assign['kinds'] = $this->config->item('kinds');
         $this->twig->render('/templates/top.html.twig', $assign);
     }
 

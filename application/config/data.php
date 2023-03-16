@@ -1,10 +1,25 @@
 <?php
 $config['kinds'] = [
-//    'coffee',
-    'espresso',
-    'frappuccino',
-    'tea',
-    'others',
+//    'coffee' => [
+//        'name' => 'coffee',
+//        'nameJp' => 'コーヒー',
+//    ] ,
+    'espresso' => [
+        'name' => 'espresso',
+        'nameJp' => 'エスプレッソ',
+    ],
+    'frappuccino' => [
+        'name' => 'frappuccino',
+        'nameJp' => 'フラペチーノ',
+    ],
+    'tea' => [
+        'name' => 'tea',
+        'nameJp' => 'ティー',
+    ],
+    'others' => [
+        'name' => 'others',
+        'nameJp' => 'その他',
+    ],
 ];
 
 $config['drinks'] = [

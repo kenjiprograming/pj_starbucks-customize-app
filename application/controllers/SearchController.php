@@ -33,8 +33,8 @@ class SearchController extends CI_Controller
         $classifiedDrinkData = [];
 
         foreach ($kinds as $kind) {
-            $classifiedDrinkData[$kind] = array_filter($drinks, static function ($drink) use ($kind) {
-                return $drink['kind'] === $kind;
+            $classifiedDrinkData[$kind['name']] = array_filter($drinks, static function ($drink) use ($kind) {
+                return $drink['kind'] === $kind['name'];
             });
         }
 
