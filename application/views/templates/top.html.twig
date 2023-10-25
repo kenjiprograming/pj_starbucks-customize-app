@@ -18,12 +18,8 @@
             <div class="scroll" id="scroll" @click.prevent="scroll">
                 <span>scroll</span>⬇︎
             </div>
-            <p style="margin-top: 10px;">スタバカスタムを探すのってひと手間かかりますよね？</p>
-            <p style="margin-bottom: 20px;">そんなひと手間なしでカスタムを探せるサイトです。</p>
-            <p>新作のフラペチーノのおすすめカスタムはどんなの？</p>
-            <p>私の好きなあのラテのおすすめカスタムってあるの？</p>
-            <p style="margin-bottom: 20px;">これらの疑問にも答えてくれるサイトです。</p>
-            <h3 style="color: white;">スタバ大好きな私達が様々な情報を元に<br>実際に試しアレンジした自信のカスタムを<br>是非お試しください</h3>
+            <p style="margin-top: 10px;">スタバのカスタムを探すのってひと手間かかりますよね？</p>
+            <p style="margin-bottom: 20px;">ここではそのひと手間なしでカスタムを探せます。</p>
         </div>
     </header>
 {% endblock header %}
@@ -35,7 +31,7 @@
                 <h2>{{ kind.name }}</h2>
                 <p>{{ kind.nameJp }}</p>
                 <img src="{{ baseUrl }}common/img/{{ kind.name }}.jpg" alt="">
-                <p class="btn"><a href="{{ baseUrl }}search/{{ kind.name }}">{{ kind.name }}を選ぶ</a></p>
+                <p class="btn"><a href="{{ baseUrl }}search/{{ kind.name }}">これを見る</a></p>
             </div>
         {% endfor %}
     </section>

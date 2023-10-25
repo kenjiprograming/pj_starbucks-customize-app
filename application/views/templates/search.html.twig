@@ -18,11 +18,6 @@
 {% block header %}
     <header>
         <h1>Choice your {{ kind }}!</h1>
-        <div class="header-text">
-            <p>Step1. 飲みたい {{ kind }} を選びましょう！</p>
-            {% if kind != 'frappuccino' %}<p>Step2. Hot か Ice のどちらかを選びましょう！</p>{% endif %}
-            <p>「<span class="shouhinmei">商品名</span>→商品画像→<span class="catchcopy">スタバ公式のキャッチコピー</span>→<span class="officialtext">スタバ公式の説明</span>→<span class="impression">私達の印象</span>」<br>の順で上から説明を書いてありますので、<br>一読頂けると面白いし、より味を分かって頂けるはず、、、？です。</p>
-        </div>
     </header>
 {% endblock header %}
 
@@ -49,12 +44,12 @@
     <div id="search-wrapper">
         <form action="{{ baseUrl }}result/" method="post">
             <div class="container">
+
                 {% for index,drink in drinks %}
                     <div class="container-a">
                         <input class="btn" id="{{ index }}" type="radio" name="name" value="{{ drink.name|raw }}"
                                {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}disabled{% endif %}
-                               @change.prevent="clickName"
-                        >
+                               @change.prevent="clickName">
                         <label for="{{ index }}" @click="scroll()">
                             <div class="inner-label">
                                 <p class="drink-title">
@@ -62,15 +57,13 @@
                                     {% if drink.customizes['ice'] is empty and drink.customizes['hot'] is empty %}<br>(coming soon...){% endif %}
                                 </p>
                                 <img style="max-width:300px; border-radius:150px;" src="{{ baseUrl }}common/img/{{ drink.imageUrl }}" alt="{{ drink.name|raw }}の画像です。">
-                                <p class="drink-subtitle">{{ drink.title }}</p>
-                                <p class="drink-text">{{ drink.text }}</p>
-                                <p class="drink-impression">{% if drink.impression is empty %}熟考中...{% else %}{{ drink.impression }}{% endif %}</p>
                             </div>
                         </label>
                     </div>
                     <input type="hidden" name="imageUrl" value="{{ drink.imageUrl }}">
                     <input type="hidden" name="price" value="{{ drink.price }}">
                 {% endfor %}
+
             </div>
 
             <div class="selection-2">
@@ -103,11 +96,8 @@
             </div>
 
             <div class="selection-4" >
-                <p class="letscustomize">Let's customize!!</p>
-                <p id="error" style="color: red;">drink またはHot or Iceが選択されていません。</p>
-                <input class="btn" type="submit" name="submit" value="カスタマイズする" id="submit"
-                       v-bind:disabled="cannot_submit"
-                >
+                <p id="error" style="color: red;"> <span v-if="!name">{{ kind }}</span> <span v-if="!name && !ice_or_hot">と</span> <span v-if="!ice_or_hot">Hot or Ice</span> を選択してください。</p>
+                <input class="btn" type="submit" name="submit" value="Let's Customize!!" id="submit" v-bind:disabled="cannot_submit">
             </div>
 
             <input type="hidden" name="kind" value="{{ kind }}">
