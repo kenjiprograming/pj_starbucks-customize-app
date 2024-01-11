@@ -19,5 +19,5 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no c3801632@160.251.71.121 -p 8022 "cd public_html/demo.cystarbucks.com/ && pwd && ls -l"
+        ssh -o StrictHostKeyChecking=no c3801632@160.251.71.121 -p 8022 "cd public_html/demo.cystarbucks.com/starbucks-customize-app && pwd && ls -l"
 #        ssh -o StrictHostKeyChecking=no c3801632@160.251.71.121 -p 8022 "cd public_html/demo.cystarbucks.com/starbucks-customize-app && git pull origin develop"
