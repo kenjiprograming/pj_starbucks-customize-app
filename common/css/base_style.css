@@ -78,6 +78,20 @@ h6 {
     margin-bottom: 10px;
 }
 
+.privacy-policy {
+  margin: 0 10px;
+}
+
+.br-sp {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .br-sp {
+        display: block;
+    }
+}
+
 footer {
     background-color: white;
     display: flex;

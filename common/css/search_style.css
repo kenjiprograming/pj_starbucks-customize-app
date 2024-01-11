@@ -82,9 +82,10 @@ img {
 }
 
 .container-a label .inner-label .drink-subtitle {
-  margin: 10px;
-  font-size: 14px;
-  text-align: left;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: bolder;
+  /* text-align: left; */
 }
 
 .container-a label .inner-label .drink-text {
@@ -171,7 +172,7 @@ p {
   border-radius: 21px;
   color: #068e0c;
   background-color: white;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 38px;
   transition: background-color 0.2s, color 0.2s;
   margin-top: 10px;

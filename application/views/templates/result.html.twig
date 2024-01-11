@@ -18,14 +18,6 @@
 {% block header %}
     <header>
         <h1>Options for you!</h1>
-        <div class="header-text">
-            <p class="lead">おすすめのカスタマイズはこれだ!</p>
-            <p> 気になるカスタマイズはありましたか？</p>
-            <p>心配要りません!!</p>
-            <p>店員さんはしっかり聞き取ってくれます!!</p>
-{#            <p>Step1. 気になるカスタマイズをタップ(クリック)！</p>#}
-{#            <p>Step2. 浮かび上がってきたものを店員さんに伝える！</p>#}
-        </div>
     </header>
 {% endblock header %}
 
@@ -64,10 +56,6 @@
 
                 {% for catchPhrase, customize in customizes %}
                     <div class="contents-blk">
-
-                        {% if loop.index0 == recommend[ice_or_hot] %}
-                            <p class="recommend-p"><span class="recommend-span">特におすすめ</span></p>
-                        {% endif %}
 
                         <h2>{{ catchPhrase }}</h2>
 
