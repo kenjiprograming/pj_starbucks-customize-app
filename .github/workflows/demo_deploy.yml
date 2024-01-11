@@ -1,0 +1,22 @@
+name: Deploy to Demo
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.2
+      with:
+        ssh-private-key: ${{ secrets.YOUR_SSH_PRIVATE_KEY_SECRET }}
+
+    - name: Deploy to Server
+      run: |
+        ssh -o StrictHostKeyChecking=no c3801632@160.251.71.121 "cd public_html/demo.cystarbucks.com && git pull origin develop"
