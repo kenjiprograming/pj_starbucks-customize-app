@@ -18,6 +18,6 @@ jobs:
         ssh-private-key: ${{ secrets.KENJI_FIRST_CONOHA }}
 
     - name: Deploy to Server
-      run: >
-        ssh -o StrictHostKeyChecking=no c3801632@www315.conoha.ne.jp -p 8022
-        -C "cd public_html/cystarbucks.com/starbucks-customize-app && git pull origin main"
+      run: |
+        ssh -o StrictHostKeyChecking=no c3801632@www315.conoha.ne.jp -p 8022 \
+        "cd public_html/cystarbucks.com/starbucks-customize-app && git pull origin main"
