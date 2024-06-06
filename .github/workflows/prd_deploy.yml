@@ -20,4 +20,4 @@ jobs:
     - name: Deploy to Server
       run: |
         ssh -o StrictHostKeyChecking=no c3801632@www315.conoha.ne.jp -p 8022 \
-        "cd public_html/cystarbucks.com/starbucks-customize-app && git pull origin main"
+        "cd public_html/cystarbucks.com/starbucks-customize-app && git fetch -p && git pull origin main"
