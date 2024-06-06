@@ -15,7 +15,7 @@ jobs:
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.5.2
       with:
-        ssh-private-key: ${{ secrets.KENJI-FIRST-CONOHA }}
+        ssh-private-key: ${{ secrets.KENJI_FIRST_CONOHA }}
 
     - name: Deploy to Server
       run: >
