@@ -25,11 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = dirname($_SERVER['SCRIPT_NAME']);
 if (isset($_SERVER['HTTP_HOST'])) {
-    $request_scheme = $_SERVER['REQUEST_SCHEME'];
+    $protocol = $_SERVER['CI_ENV'] === 'development' ? 'http://' : 'https://';
     $http_host      = $_SERVER['HTTP_HOST'];
     $script_name    = isset($_SERVER['ORIG_SCRIPT_NAME']) ? dirname($_SERVER['ORIG_SCRIPT_NAME']) : dirname($_SERVER['SCRIPT_NAME']);
 
-    $config['base_url'] = $request_scheme. '://'. $http_host . $script_name. '/';
+    $config['base_url'] = $protocol. $http_host . $script_name. '/';
 }
 
 
