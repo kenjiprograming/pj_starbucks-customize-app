@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = dirname($_SERVER['SCRIPT_NAME']);
 if(isset($_SERVER['HTTP_HOST'])){
-    $config['base_url'] = ((!empty($_SERVER['HTTPS']) and $_SERVER['HTTPS'] !== 'off')
+    $config['base_url'] = ((!empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'off')
             ? 'https://' : 'http://'). $_SERVER['HTTP_HOST']
         . (isset($_SERVER['ORIG_SCRIPT_NAME']) ? dirname($_SERVER['ORIG_SCRIPT_NAME']) : dirname($_SERVER['SCRIPT_NAME']))
         . '/';
