@@ -21,21 +21,21 @@ class ResultController extends CI_Controller
 
         $drink = $this->config->item('drinks')[$post['name']];
 
-        $ice_or_hot    = $post['ice_or_hot'];
+        $ice_or_hot = $post['ice_or_hot'];
 
         $kind       = $drink['kind'];
         $name       = $drink['name'];
         $price      = $drink['price'];
         $imageUrl   = $drink['imageUrl'];
         $customizes = $drink['customizes'];
-        $recommend = $drink['recommend'];
+        $recommend  = $drink['recommend'];
 
         $totalPrices = [];
 
         foreach ($customizes[$ice_or_hot] as $catchPhrase => $customize)
         {
             $totalPrice = $price;
-            foreach ($customize as $custom => $addPrice)
+            foreach ($customize['order'] as $custom => $addPrice)
             {
                  $totalPrice += $addPrice;
             }

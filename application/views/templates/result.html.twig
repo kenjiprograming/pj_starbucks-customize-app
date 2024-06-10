@@ -61,19 +61,18 @@
 
                         <div class="items">
                             <div class="items-blk">
-                                {% for custom, addPrice in customize %}
+                                {% for custom, addPrice in customize['order'] %}
                                     {% if loop.index0 == 0 %}
-                                        <p>{% if ice_or_hot == 'ice' %}アイス{% else %}ホット{% endif %} トールサイズ の</p>
+                                        <p>{{ ice_or_hot }} tall サイズ</p>
                                         <p class="name">★{{ name }}</p>
-                                        <p>カスタマイズを</p>
                                     {% endif %}
                                     <p class="custom">・{{ custom }}</p>
                                 {% endfor %}
-                                <p>でお願いします。</p>
                             </div>
                         </div>
 
                         <h4>- Total Price ¥{{ totalPrices[catchPhrase] }} -</h4>
+                        <p><a href="{{ customize['quote'] }}" target="_blank" class="quote" style="color: white;">＞こちらから引用</a></p>
 
                     </div>
                 {% endfor %}
