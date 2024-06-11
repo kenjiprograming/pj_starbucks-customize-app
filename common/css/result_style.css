@@ -49,6 +49,11 @@ h1 {
     z-index: 10;
 }
 
+.contents-blk .quote {
+    color: white;
+    border-bottom: solid 1px white;
+}
+
 .recommend-p {
     width: 100px;
     position: relative;
@@ -89,10 +94,13 @@ h1 {
     position: relative;
     z-index: 1;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .items-blk {
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .items p {
@@ -208,7 +216,7 @@ h4 {
 
     h2 {
         margin: 10px;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     h3 {
@@ -262,7 +270,13 @@ h4 {
     .block {
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
         padding-top: 30px;
+    }
+
+    .contents-blk .quote {
+        color: white;
+        border-bottom: none;
     }
 
     p {

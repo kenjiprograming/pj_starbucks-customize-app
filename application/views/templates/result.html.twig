@@ -1,7 +1,7 @@
 {% extends "./templates/layout.html.twig" %}
 
 {% block title %}
-    | Options for you
+    | customizes for you
 {% endblock title %}
 
 {% block links%}
@@ -17,7 +17,7 @@
 
 {% block header %}
     <header>
-        <h1>Options for you!</h1>
+        <h1>Customizes for you!</h1>
     </header>
 {% endblock header %}
 
@@ -72,7 +72,7 @@
                         </div>
 
                         <h4>- Total Price ¥{{ totalPrices[catchPhrase] }} -</h4>
-                        <p><a href="{{ customize['quote'] }}" target="_blank" class="quote" style="color: white;">＞こちらから引用</a></p>
+                        <p class="quote"><a href="{{ customize['quote'] }}" target="_blank" style="color: white;">＞Instagramより引用。</a></p>
 
                     </div>
                 {% endfor %}
