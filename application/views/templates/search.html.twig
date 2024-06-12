@@ -97,7 +97,7 @@
 
             <div class="selection-4" >
                 <p id="error" style="color: red;"> <span v-if="!name">{{ kind }}</span> <span v-if="!name && !ice_or_hot">と</span> <span v-if="!ice_or_hot">Hot or Ice</span> を選択してください。</p>
-                <input class="btn" type="submit" name="submit" value="Let's Customize!!" id="submit" v-bind:disabled="cannot_submit">
+                <input class="btn" type="submit" name="submit" value="Let's Customize" id="submit" v-bind:disabled="cannot_submit">
             </div>
 
             <input type="hidden" name="kind" value="{{ kind }}">
