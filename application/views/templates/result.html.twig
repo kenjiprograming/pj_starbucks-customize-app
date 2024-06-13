@@ -71,7 +71,9 @@
                             </div>
                         </div>
 
+                        {% if customize['quote'] != '' %}
                         <p class="quote"><a href="{{ customize['quote'] }}" target="_blank" style="color: white;">＞こちらより引用。</a></p>
+                        {% endif %}
                         <h4>- Total Price ¥{{ totalPrices[catchPhrase] }} -</h4>
 
                     </div>
